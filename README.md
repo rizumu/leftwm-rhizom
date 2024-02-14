@@ -6,7 +6,7 @@ A [leftwm](https://github.com/leftwm/leftwm) theme based upon the
 Modeled after [Ascent](https://github.com/mwalrus/Ascent).
 
 ## Screenshots
-![Emacs, urxvt](https://github.com/rizumu/leftwm-rhizom/blob/main/leftwm-rhizom.png?raw=true)
+![Emacs, urxvt](https://raw.githubusercontent.com/rizumu/leftwm-rhizom/main/themes/Rhizom/leftwm-rhizom.png)
 
 ## Dependencies
 - leftwm
