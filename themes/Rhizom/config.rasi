@@ -1,0 +1,16 @@
+configuration {
+	modes: "window,drun,run,ssh";
+	font: "Inconsolata 12";
+	show-icons: true;
+	combi-modes: "window,run";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+
+@theme "~/.config/leftwm/themes/Rhizom/rhizom.rasi"

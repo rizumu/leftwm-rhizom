@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+export $(dbus-launch)
+SCRIPTPATH="$(cd "$(dirname "$0")"; pwd -P)"
+
+# Down the last running theme.
+if [ -f "/tmp/leftwm-theme-down" ]; then
+    /tmp/leftwm-theme-down
+    rm /tmp/leftwm-theme-down
+fi
+ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
+
+# Set the theme.ron config.
+leftwm-command "LoadTheme $SCRIPTPATH/theme.ron"
+
+# Set background.
+if [ -x "$(command -v feh)" ]; then
+  feh --bg-fill "$SCRIPTPATH"/wallpaper.jpg
+fi
+
+# Boot picom if it exists.
+if [ -x "$(command -v picom)" ]; then
+  pkill picom
+  picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 &> /dev/null &
+fi
+
+# Check if dunst is installed and if it is, restart.
+if [ -x "$(command -v dunst)" ]; then
+  pkill dunst
+  dunst  &> /dev/null &
+fi
+
+# Boot polybar based on the number of monitors found.
+if [ -x "$(command -v polybar)" ]; then
+  pkill polybar
+  monitors="$(polybar -m | sed s/:.*// | tac)"
+  while read -r display; do
+    MONITOR=$display polybar -c "$SCRIPTPATH/polybar.config" topbar &> /dev/null &
+    MONITOR=$display polybar -c "$SCRIPTPATH/polybar.config" bottombar &> /dev/null &
+  done <<< "$monitors"
+  exit 0
+fi
