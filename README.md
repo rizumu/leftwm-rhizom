@@ -19,7 +19,7 @@ Modeled after [Ascent](https://github.com/mwalrus/Ascent).
 
 ## Installing
 1. `git clone https://github.com/rizumu/leftwm-rhizom.git ~/.config/leftwm`
-2. `ln -s ~/.config/leftwm/themes/Rhizom/rofi.rasi ~/config/rofi/rofi.rasi`
-3. `ln -s ~/.config/leftwm/themes/Rhizom/dunstrc ~/config/dunst/dunstrc`
+2. `mkdir ~/.config/rofi && ln -s ~/.config/leftwm/themes/Rhizom/config.rasi ~/config/rofi/config.rasi`
+3. `mkdir ~/.config/dunst && ln -s ~/.config/leftwm/themes/Rhizom/dunstrc ~/config/dunst/dunstrc`
 4. `leftwm-theme update`
 5. `leftwm-command SoftReload`
