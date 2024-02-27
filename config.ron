@@ -158,6 +158,7 @@
         (command: Execute, value: "[ -f ~/.pomodoro_session ] && rm ~/.pomodoro_session", modifier: ["modkey", "Control"], key: "p"),
         (command: Execute, value: "xscreensaver-command --lock", modifier: ["modkey", "Shift"], key: "s"),
         (command: Execute, value: "slock", modifier: ["modkey", "Control"], key: "l"),
+        (command: Execute, value: "mpc toggle", modifier: ["modkey"], key: "Delete"),
         (command: ToggleFullScreen, modifier: ["modkey"], key: "f"),
         (command: IncreaseMainSize, value: "5", modifier: ["modkey"], key: "h"),
         (command: DecreaseMainSize, value: "5",  modifier: ["modkey"], key: "l"),
