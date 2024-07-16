@@ -122,11 +122,10 @@
     ],
     layout_mode: Tag,
     insert_behavior: Bottom,
-    // Waiting on arguments feature: https://github.com/leftwm/leftwm/pull/1225
     scratchpad: [
-        (name: "alsamixer", value: "urxvtcd -e alsamixer", x: 250, y: 150, height: 800, width: 1400),
-        (name: "mc", value: "urxvtcd -e mc", x: 250, y: 150, height: 800, width: 1400),
-        (name: "ncmpcpp", value: "urxvtcd -e ncmpcpp", x: 250, y: 150, height: 800, width: 1400),
+        (name: "alsamixer", value: "alacritty", args: ["-e", "alsamixer"], x: 250, y: 150, height: 800, width: 1400),
+        (name: "mc", value: "alacritty", args: ["-e", "mc"], x: 250, y: 150, height: 800, width: 1400),
+        (name: "ncmpcpp", value: "alacritty", args: ["-e", "ncmpcpp"], x: 250, y: 150, height: 800, width: 1400),
     ],
     window_rules: [
         (window_class: "emacs", spawn_on_tag: 2),
