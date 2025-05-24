@@ -160,7 +160,7 @@
         (command: Execute, value: "mpc toggle", modifier: ["modkey"], key: "Delete"),
         (command: ToggleFullScreen, modifier: ["modkey"], key: "f"),
         (command: IncreaseMainSize, value: "5", modifier: ["modkey"], key: "h"),
-        (command: DecreaseMainSize, value: "5",  modifier: ["modkey"], key: "l"),
+        (command: DecreaseMainSize, value: "5", modifier: ["modkey"], key: "l"),
         (command: FloatingToTile, modifier: ["modkey", "Shift"], key: "t"),
         (command: TileToFloating, modifier: ["modkey", "Shift"], key: "f"),
         (command: ToggleFloating, modifier: ["modkey", "Control"], key: "f"),
